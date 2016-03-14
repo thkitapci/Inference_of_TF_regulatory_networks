@@ -1,0 +1,1 @@
+for f in data_for_plots_num_of_binding/*.txt;do echo "Gene_Name Number_of_binding_site Strenght_of_binding Expression_covariation" >data_for_plots/$(basename $f);join data_for_plots_num_of_binding/$(basename $f) data_for_plots_str_of_binding/$(basename $f) |cut -d " " -f 1,2,4,5 >>data_for_plots/$(basename $f);done
