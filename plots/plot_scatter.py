@@ -44,8 +44,8 @@ all_files=[]
 
 #for f in glob.glob('data_for_plots_num_of_binding/*.txt'):
 #for f in glob.glob('data_for_plots_str_of_binding/*.txt'):
-for f in glob.glob('data_for_plots/*.txt'):
-#for f in glob.glob('*.txt'):
+#for f in glob.glob('data_for_plots/*.txt'):
+for f in glob.glob('data_temp/*.txt'):
     all_files.append(str(f))
 
 print (all_files)
