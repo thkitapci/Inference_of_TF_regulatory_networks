@@ -13,7 +13,7 @@
 # Our numerical workhorses
 import numpy as np
 import scipy.integrate
-
+import sys
 # Import pyplot for plotting
 import matplotlib.pyplot as plt
 
@@ -42,10 +42,18 @@ all_files=[]
 
 #print "neden_yazmiyor"
 
+
+if len(sys.argv) !=2:
+    print "Missing argument usage *.py path_to_dir_with_txts"
+    sys.exit()
+path_to_input=sys.argv[1]
+
+#txt format is "Gene_Name","Number_of_binding_site","Average_strength_of_binding","Expression_covariation"
+
 #for f in glob.glob('data_for_plots_num_of_binding/*.txt'):
 #for f in glob.glob('data_for_plots_str_of_binding/*.txt'):
 #for f in glob.glob('data_for_plots/*.txt'):
-for f in glob.glob('data_temp/*.txt'):
+for f in glob.glob(path_to_input+'/*.txt'):
     all_files.append(str(f))
 
 print (all_files)
@@ -53,8 +61,8 @@ print (all_files)
 
 all_files.sort(key=str.lower) #sort file names lexicographically
 
-pdf_str_of_binding=PdfPages("Exp_cov_vs_str_of_binding.pdf")
-pdf_num_of_binding=PdfPages("Exp_cov_vs_num_of_binding.pdf")
+pdf_str_of_binding=PdfPages(path_to_input+"/Exp_cov_vs_str_of_binding.pdf")
+pdf_num_of_binding=PdfPages(path_to_input+"/Exp_cov_vs_num_of_binding.pdf")
 
 
 
