@@ -18,7 +18,7 @@ import sys
 import matplotlib.pyplot as plt
 
 # Seaborn, useful for graphics
-#import seaborn as sns
+import seaborn as sns  #important to have black-and-white pictures , why??? I don't know!
 
 # Import Bokeh modules for interactive plotting
 import bokeh.io
