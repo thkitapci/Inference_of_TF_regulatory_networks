@@ -53,12 +53,8 @@ path_to_input=sys.argv[1]
 #for f in glob.glob('data_for_plots_num_of_binding/*.txt'):
 #for f in glob.glob('data_for_plots_str_of_binding/*.txt'):
 #for f in glob.glob('data_for_plots/*.txt'):
-<<<<<<< HEAD
 for f in glob.glob(path_to_input+'/*.txt'):
-=======
-for f in glob.glob('data_plots/*.txt'):
->>>>>>> c35314a5636e59177626d669c9a1f672f8dabd9e
-    all_files.append(str(f))
+	all_files.append(str(f))
 
 print (all_files)
 #print "ahanda"
