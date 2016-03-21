@@ -18,7 +18,7 @@ import sys
 import matplotlib.pyplot as plt
 
 # Seaborn, useful for graphics
-import seaborn as sns
+#import seaborn as sns
 
 # Import Bokeh modules for interactive plotting
 import bokeh.io
