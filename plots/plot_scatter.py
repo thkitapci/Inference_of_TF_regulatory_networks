@@ -47,6 +47,7 @@ if len(sys.argv) !=2:
     print "Missing argument usage *.py path_to_dir_with_txts"
     sys.exit()
 path_to_input=sys.argv[1]
+#path_to_output=sys.argv[2]
 
 #txt format is "Gene_Name","Number_of_binding_site","Average_strength_of_binding","Expression_covariation"
 
@@ -60,6 +61,8 @@ print (all_files)
 #print "ahanda"
 
 all_files.sort(key=str.lower) #sort file names lexicographically
+
+output_file_name=os.path.basename(path_to_input)
 
 pdf_str_of_binding=PdfPages(path_to_input+"/Exp_cov_vs_str_of_binding.pdf")
 pdf_num_of_binding=PdfPages(path_to_input+"/Exp_cov_vs_num_of_binding.pdf")
