@@ -24,9 +24,9 @@ rscript.r
 `tail -n+2 genes_TF.txt |while read line; do grep $line result.txt | awk '{if($3=="gene") print;}' >>position_Genes.txt;done;`
 
 # accessible regions of genes in 5kb window
-`perl 5kb_1.pl`  (input files are position_Genes file which has position of the genes which have positive and negative correlation with each TF of interest  & correlated accessible regions of developmental stage of our study )
+`perl 5kb.pl`  (input files are position_Genes file which has position of the genes which have positive and negative correlation with each TF of interest  & correlated accessible regions of developmental stage of our study )
 
-output of perl 5kb_1: accessible_regions_TF
+output of perl 5kb: accessible_regions_TF
 
 #pull out the sequence of correlated accessible regions from reference genome
 `perl fastasequence.pl` (input files are fasta sequence of reference genome & accessible regions of 14 TFs output file is results_bicoid.txt
