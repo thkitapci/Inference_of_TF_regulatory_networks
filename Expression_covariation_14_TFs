@@ -1,4 +1,4 @@
- #input file is tfselected.txt  to pull out expression levels of 14 TFs of interest
+ #input files are tfselected.txt and gene_id of 14 TFs of interest to pull out expression levels of these TFs 
  
  
  tf=read.table("tfselected.txt",sep="\t",header=T)
