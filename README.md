@@ -26,10 +26,11 @@ rscript.r
 # accessible regions of genes which have correlation with each TF of interest in 5kb window
 `perl 5kb.pl`  (input files are position_Genes file which has positions of the genes which have positive and negative correlation with each TF of interest from  Drosophila_melanogaster gtf file  & correlated accessible regions file has the accessible regions of Drosophila_melanogaster developmental stage which we are interested in  )
 
-output of perl 5kb: accessible_regions_genes_TF (file has positions of genes accessible regions for each TF)
+output of perl 5kb: position_accessible_regions_genes_TF (file has positions of genes accessible regions for each TF)
 
-#pull out the fasta sequence for  accessible regions positions of genes which have correlation with each TF of interest  from reference genome
-`perl fastasequence.pl` (input files are fasta sequence of reference genome &positions of accessible regions of genes
+#pull out the fasta sequence for  accessible regions of genes which have correlation with each TF of interest  from reference genome
+`perl fastasequence.pl` (input files are Drosophila_melanogaster.BDGP5.75.dna.toplevel.fa (fasta sequence of reference genome) and position_accessible_regions_genes_TF.txt (positions of accessible regions of genes)
+
                           output file is fasta_sequence_accessible_regions_genes_TF
 
 
