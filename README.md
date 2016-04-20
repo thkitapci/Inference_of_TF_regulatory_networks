@@ -21,7 +21,7 @@ rscript.r
 
 `sed -e 's/\"//g' result1.txt > result.txt`
 
-`tail -n+2 allgenes_TF.txt |while read line; do grep $line result.txt | awk '{if($3=="gene") print;}' >>position_Genes.txt;done;`
+`tail -n+2 genes_TF.txt |while read line; do grep $line result.txt | awk '{if($3=="gene") print;}' >>position_Genes.txt;done;`
 
 # accessible regions of genes in 5kb window
 `perl 5kb_1.pl`  (input files are genes which have positive and negative correlation with 14 TFs (position_Genes) & correlated accessible regions)
