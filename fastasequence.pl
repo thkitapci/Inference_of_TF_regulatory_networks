@@ -6,7 +6,7 @@ use warnings;
 
 open ("IN","Drosophila_melanogaster.BDGP5.75.dna.toplevel.fa");
 
-open("aa","engrailed_accessibleregions");
+open("aa","position_accessible_regions_genes_TF.txt");
 
 open(RES,">results.txt");
 
