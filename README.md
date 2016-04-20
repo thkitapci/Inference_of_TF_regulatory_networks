@@ -24,9 +24,9 @@ rscript.r
 `tail -n+2 genes_TF.txt |while read line; do grep $line result.txt | awk '{if($3=="gene") print;}' >>position_Genes.txt;done;`
 
 # accessible regions of genes which have correlation with each TF of interest in 5kb window
-`perl 5kb.pl`  (input files are position_Genes file which has position of the genes which have positive and negative correlation with each TF of interest  & correlated accessible regions of developmental stage of our study )
+`perl 5kb.pl`  (input files are position_Genes file which has positions of the genes which have positive and negative correlation with each TF of interest from  Drosophila_melanogaster gtf file  & correlated accessible regions file has the accessible regions of Drosophila_melanogaster developmental stage which we are interested in  )
 
-output of perl 5kb: accessible_regions_genes_TF
+output of perl 5kb: accessible_regions_genes_TF (file has positions of genes accessible regions for each TF)
 
 #pull out the fasta sequence for  accessible regions positions of genes which have correlation with each TF of interest  from reference genome
 `perl fastasequence.pl` (input files are fasta sequence of reference genome &positions of accessible regions of genes
