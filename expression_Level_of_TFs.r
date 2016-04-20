@@ -1,6 +1,6 @@
-#Input is embryoCountsresult_with_length.txt
+#Inputs are embryoCountsresult_with_length.txt and TF_names397.txt was obtained from FlyTF.org 
 
-#Output is tfselected.txt -> Expression level of TFs present in our data
+#Output is tfselected.txt -> Expression level of TFs which expressed in our data
 
 data=read.table("embryoCountsresult_with_length.txt",sep="\t",header=T)
 
