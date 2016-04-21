@@ -86,7 +86,7 @@ D) get genes_name , number of binding sites , average of binding sites , co-vari
                               
                    inputfile 1 : genes_names_count_average_tf.txt 
                    
-                  inputfile 2 : expression_covariation_tf_14.txt file (expression covariation of each TF of interest with 7805 genes).
+                  inputfile 2 : expression_covariation_tf_14.txt (expression covariation of each TF of interest with 7805 genes).
                   
                   outputfile : genes_names_count_average_expression_covariation_tf.txt
 
