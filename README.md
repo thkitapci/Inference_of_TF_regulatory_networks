@@ -10,9 +10,9 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
 
 perl [`embryoCountscript_combination.pl`](https://github.com/thkitapci/Inference_of_TF_regulatory_networks/blob/master/embryoCountscript_combination.pl)
 
-#R script
+
 						   
-rscript.r
+
 
 
 #pull out the positions of the genes which have correlated values between -1 and 1 with each TF of interest from gtf file
