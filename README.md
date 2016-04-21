@@ -48,11 +48,14 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
 #Filtering patser output data
 
  Patser is run using the "-li" option which sets the p-value cut-off based on the sample size adjusted information content.
+ 
+ 
+                                    10_5_tail_score_distribution.r
   
     A: look at the distribution of the scores given by patser then determine the cutoffs of 10% and 5 % tail of score distribution.
-    
+                                           
+                                           
                                 
- 
     B: keep the genes in 10% and 5 % tail of score distribution for downstream analysis.
 
 
