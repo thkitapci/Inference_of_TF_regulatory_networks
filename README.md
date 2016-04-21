@@ -30,23 +30,47 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
                          output file : rpkm59_exp50_genes_least_50_samples.tab
                          
                          
-                                 
+# Expression levels of TFs which expressed in our data
 
-    
+                                                expression_level_of_TFs.r 
+                                                
+                          input file 1 :    embryoCountsresult_with_length.txt
+                          
+                          input file 2: TF_names397.txt ( has TFs names from FlyTF.org)
+                          
+                          output file : tfselected.txt file 
+                          
+# Correlation to get the  expression covariation  between highly expressed genes (7805 ) and all TFs expressed in our data.
 
+                                                      Correlation.r 
+                                                      
+                             input file 1:  rpkm59_exp50_genes_least_50_samples.tab
+                             
+                             input file 2: tfselected.txt file
+                             
+                             output file : cor_tf_gene.tab 
+                             
+                             
+# Correlation to get the  expression covariation  between highly expressed genes (7805 ) and 14 TFs of interest.    
 
-
-						   
-
-
-
+                                             Expression_covariation_14_TFs.r  
+                                             
+                         input file 1:  tfselected.txt file       
+                         
+                         input file 2: gene_id_14_TFs
+                         
+                         input file 3: rpkm59_exp50_genes_least_50_samples.tab
+                         
+                   output file : expression_covariation_tf_14.txt  (has genes_name_TF (column1) and expressioncovariation (column2)
+                             
+                             
 #pull out the positions of the genes which have correlated values between -1 and 1 with each TF of interest from gtf file
 
 `awk '{if($3=="gene")print;}' Drosophila_melanogaster.BDGP5.75.gtf >result1.txt`
 
 `sed -e 's/\"//g' result1.txt > result.txt`
 
-`tail -n+2 genes_TF.txt |while read line; do grep $line result.txt | awk '{if($3=="gene") print;}' >>position_Genes.txt;done;`
+`tail -n+2 genes_name_TF.txt |while read line; do grep $line result.txt | awk '{if($3=="gene") print;}' >>position_Genes.txt;done;`
 
 # accessible regions of genes which have correlation with each TF of interest in 5kb window
                              `5kb.pl`
