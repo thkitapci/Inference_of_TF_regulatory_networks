@@ -44,7 +44,7 @@ output of perl 5kb: position_accessible_regions_genes_TF (file has positions of 
 
 # analysis after patser
 
-A) `perl count.pl` count the numbers of each gene has p value less than -6---consider as number of binding sites output:count_bicoid_genes.txt
+A) `count.pl` count the numbers of binding sites of each gene with TF motif (PWM) -consider as number of binding sites 
 
 B)`perl average_binding_score.pl` calculate the average of  binding scores for each gene has p value less than -6 --consider as average of strength of TF binding sites output file: bicoid_genes_average.txt 
 
