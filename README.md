@@ -52,8 +52,8 @@ rscript.r
 
 # analysis after patser
 
-A) `count.pl` count the numbers of binding sites of each gene in 10 and 5 % tail of score distribution with TF motif (PWM) -consider as number of binding sites 
-
+A)  count the numbers of binding sites for each gene in 10 and 5 % tail of score distribution with each TF motif (PWM) of interest -consider as number of binding sites 
+                                     `count.pl`
       input file (TF_results_patser_scores) :  names and scores of the genes in 10 and 5% tail of score distribution
       output file (number_binding_sites_TF) : name and numbers of each gene in 10 and 5% tail of score distribution
                              
