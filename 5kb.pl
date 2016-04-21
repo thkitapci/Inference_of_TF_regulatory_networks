@@ -3,7 +3,7 @@
 
 use strict;
 
-open("IN","position_Genes");
+open("IN","position_Genes.txt");
 
 foreach(<IN>){
 
