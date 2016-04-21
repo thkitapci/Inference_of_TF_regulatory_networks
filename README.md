@@ -26,18 +26,18 @@ rscript.r
 # accessible regions of genes which have correlation with each TF of interest in 5kb window
                              `5kb.pl`
                              
-  input file1: position_Genes.txt file (positions of the genes which have positive and negative correlation with each TF of interest from  Drosophila_melanogaster gtf file).
+  input file 1: position_Genes.txt file (positions of the genes which have positive and negative correlation with each TF of interest from  Drosophila_melanogaster gtf file).
   
-  input file2:correlated accessible regions file ( the accessible regions of Drosophila_melanogaster developmental stage which we are interested in).
+  input file 2:correlated accessible regions file ( the accessible regions of Drosophila_melanogaster developmental stage which we are interested in).
   
    output file: position_accessible_regions_genes_TF.txt file ( positions of accessible regions of genes which have correlation with each TF).
 
 #pull out the fasta sequence for  accessible regions of genes which have correlation with each TF of interest  from reference genome
                             `fastasequence.pl`
 
-    input file1: Drosophila_melanogaster.BDGP5.75.dna.toplevel.fa (fasta sequence of reference genome)
+    input file 1: Drosophila_melanogaster.BDGP5.75.dna.toplevel.fa (fasta sequence of reference genome)
     
-    inputfile2: position_accessible_regions_genes_TF.txt file
+    inputfile 2: position_accessible_regions_genes_TF.txt file
     
     output file : fasta_sequence_accessible_regions_genes_TF.txt  (fasta sequence of accessible regions of genes have correlation with each TF)
 
@@ -70,7 +70,15 @@ B) calculate the average of  binding scores for each gene has more than one bind
         
         output file (TF.avg.txt) : name and average strength binding of each gene in 10 and 5% tail of score distribution
 
-C)`perl countnumber_bindingscore.pl` get genes_name,number of binding sites , average of binding sore for each gene has p value less than -6 output file: genes_count_average_bicoid.txt
+C) get genes_name,number of binding sites and average of binding sore for each gene in 10 and 5% tail of score distribution with each TF motif (PWM) of interest
+
+                                     `countnumber_bindingscore.pl`
+                                     
+              inputfile 1: number_binding_sites_TF.txt
+              
+              inputfile 2: TF.avg.txt
+              
+              output file : genes_names_count_average_tf.txt
 
 D)`perl genes_numbers_score_expression.pl` get genes_name , number of binding sites , average of binding sites , co-variation of each gene has p value less than -6 output file:genes_count_average_expression_bicoid
 
