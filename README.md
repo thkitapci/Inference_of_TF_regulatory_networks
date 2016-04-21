@@ -100,20 +100,23 @@ E)  keep the genes which have more than two binding sites then divide those gene
                        
                        output file 2 : positive.txt (genes have more than two binding sites and positive covariation with TF)
 
-F) two spearman correlations are done R for each TFs (positive and negative covariation). one between covariation and number of binding sites and another one between covariation and average of binding score
+F)  spearman correlations is done by R for positive.txt and negative.txt  to estimate the correlation between the number of binding sites and expressioncovariation as well as between average strength binding and expressioncovariation of each TF of interest.
+            
+                           # R script (positive.txt)
+                           
+                 data_positive=read.table("positive.txt",sep="\t")
 
-# R script 
-data_positive=read.table('C:/Users/Noha Osman/Desktop/positive_201_bicoid_492.txt',sep="\t")
+cor.test(data_positive[,2],data_positive[,4] ,method='spearman')  # orrelation between number of binding sites and expressioncovariation
 
-cor.test(data_positive[,2],data_positive[,4] ,method='spearman')  # correlation of number of binding sites
+cor.test(data_positive[,3],data_positive[,4] ,method='spearman')   # correlation between average of strength binding and expressioncovariation
+        
+                        #  R script (positive.txt)
 
-cor.test(data_positive[,3],data_positive[,4] ,method='spearman')   # correlation of average of strength binding
+                    data_negative=read.table("negative.txt",sep="\t")
 
-data_negative=read.table('C:/Users/Noha Osman/Desktop/negative_291_bicoid_492.txt',sep="\t")
+ cor.test(data_negative[,2],data_negative[,4] ,method='spearman')  # correlation between number of binding sites and expressioncovariation
 
-cor.test(data_negative[,2],data_negative[,4] ,method='spearman')
-
-cor.test(data_negative[,3],data_negative[,4] ,method='spearman')
+ cor.test(data_negative[,3],data_negative[,4] ,method='spearman')  # correlation between average of strength binding and expressioncovariation
 
 
 
