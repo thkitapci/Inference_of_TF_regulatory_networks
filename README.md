@@ -37,9 +37,9 @@ output of perl 5kb: position_accessible_regions_genes_TF (file has positions of 
 #patser program command to get the scores (strength binding) and numbers of binding sites 
 `patser-v3e -A a:t 0.53 c:g 0.47 -f fasta_sequence_accessible_regions_genes_TF.txt  -m PWM of each TF of interest -c -li > TF_results_patser_scores`
 
-#Filtering patser output
+#Filtering patser output data
 
-`blabla` Patser is run using the "-li" option which sets the p-value cut-off based on the sample size adjusted information content. Then we look at the distribution of the scores given by patser (insert a histogram) and take only 10% tail.
+ Patser is run using the "-li" option which sets the p-value cut-off based on the sample size adjusted information content. Then we look at the distribution of the scores given by patser  and take  10% and 5 % tail of score distribution.
 
 
 # analysis after patser
