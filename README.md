@@ -166,17 +166,9 @@ E)  keep the genes which have more than two binding sites then divide those gene
 
 F)  spearman correlations is done by R for positive.txt and negative.txt  to estimate the correlation between the number of binding sites and expressioncovariation as well as between average strength binding and expressioncovariation of each TF of interest.
             
-                           # R script (positive.txt)
+                           # R script (positive.r)
                            
- 
-        
-                        #  R script (positive.txt)
-
- data_negative=read.table("negative.txt",sep="\t")
-
- cor.test(data_negative[,2],data_negative[,4] ,method='spearman')  # correlation between number of binding sites and expressioncovariation
-
- cor.test(data_negative[,3],data_negative[,4] ,method='spearman')  # correlation between average of strength binding and expressioncovariation
+                           #  R script (positive.r)
 
 
 
