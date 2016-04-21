@@ -46,8 +46,8 @@ output of perl 5kb: position_accessible_regions_genes_TF (file has positions of 
 
 A) `count.pl` count the numbers of binding sites of each gene in 10 and 5 % tail of score distribution with TF motif (PWM) -consider as number of binding sites 
 
-          input file (TF_results_patser_scores) :  names and scores of the genes in 10 and 5% tail of score distribution
-          output file (number_binding_sites_TF) : name and numbers of each gene in 10 and 5% tail of score distribution
+      input file (TF_results_patser_scores) :  names and scores of the genes in 10 and 5% tail of score distribution
+      output file (number_binding_sites_TF) : name and numbers of each gene in 10 and 5% tail of score distribution
                              
 
 
