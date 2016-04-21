@@ -25,9 +25,10 @@ rscript.r
 
 # accessible regions of genes which have correlation with each TF of interest in 5kb window
                              `5kb.pl`
-  input file1 : position_Genes file which has positions of the genes which have positive and negative correlation with each TF of interest from  Drosophila_melanogaster gtf file.
+                             
+  input file1: position_Genes file which has positions of the genes which have positive and negative correlation with each TF of interest from  Drosophila_melanogaster gtf file.
   
-  input file2 :correlated accessible regions file has the accessible regions of Drosophila_melanogaster developmental stage which we are interested in.
+  input file2:correlated accessible regions file has the accessible regions of Drosophila_melanogaster developmental stage which we are interested in.
   
    output file: position_accessible_regions_genes_TF.txt file has positions of accessible regions of genes which have correlation with each TF
 
