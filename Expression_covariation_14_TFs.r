@@ -17,5 +17,5 @@ write.table(TF14,file="expression_level_14_TFs", row.names=F, sep="\t",quote=F)
     
     correlation_TF_14=cor(t(gene), t(tf14))
     
-    write.table(correlation_TF_14,file="expression_covariation_tf_14", sep="\t",quote=F)
+    write.table(correlation_TF_14,file="expression_covariation_tf_14.txt", sep="\t",quote=F)
 
