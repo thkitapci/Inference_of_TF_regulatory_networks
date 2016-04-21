@@ -62,10 +62,13 @@ A)  count the numbers of binding sites for each gene in 10 and 5 % tail of score
                              
 
 
-B)`average_binding_score.pl` calculate the average of  binding scores for each gene has more than one binding sit in 10 and 5 % tail of score distribution with TF motif (PWM) --consider as average of strength of TF binding sites 
+B) calculate the average of  binding scores for each gene has more than one binding sit in 10 and 5 % tail of score distribution with each TF motif (PWM)of interest --consider as average of strength of TF binding sites 
+
+                                             `average_binding_score.pl`
                      
-        input file (TF_results_patser_scores) :  names and scores of the genes in 10 and 5% tail of score distribution
-        output file (TF.avg) : name and average strength binding of each gene in 10 and 5% tail of score distribution
+        input file (TF_results_patser_scores_5_10.txt) :  names and scores of the genes in 10 and 5% tail of score distribution
+        
+        output file (TF.avg.txt) : name and average strength binding of each gene in 10 and 5% tail of score distribution
 
 C)`perl countnumber_bindingscore.pl` get genes_name,number of binding sites , average of binding sore for each gene has p value less than -6 output file: genes_count_average_bicoid.txt
 
