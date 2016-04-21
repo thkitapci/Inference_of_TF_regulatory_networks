@@ -56,7 +56,7 @@ A)  count the numbers of binding sites for each gene in 10 and 5 % tail of score
 
                                      `count.pl`
                                      
-      input file (TF_results_patser_scores.txt) :  names and scores of the genes in 10 and 5% tail of score distribution
+      input file (TF_results_patser_scores_5_10.txt) :  names and scores of the genes in 10 and 5% tail of score distribution
       
       output file (number_binding_sites_TF.txt) : name and numbers of each gene in 10 and 5% tail of score distribution
                              
