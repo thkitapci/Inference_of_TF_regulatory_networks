@@ -6,7 +6,7 @@ use warnings;
 
 my %count;
 
-open("IN","TF_results_patser_scores");
+open("IN","TF_results_patser_scores_5_10.txt");
 
 foreach(<IN>){chomp;
 
