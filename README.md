@@ -29,12 +29,16 @@ rscript.r
   
   input file2 :correlated accessible regions file has the accessible regions of Drosophila_melanogaster developmental stage which we are interested in.
   
-   output file: position_accessible_regions_genes_TF file has positions of accessible regions of genes which have correlation with each TF
+   output file: position_accessible_regions_genes_TF.txt file has positions of accessible regions of genes which have correlation with each TF
 
 #pull out the fasta sequence for  accessible regions of genes which have correlation with each TF of interest  from reference genome
-`perl fastasequence.pl` (input files are Drosophila_melanogaster.BDGP5.75.dna.toplevel.fa (fasta sequence of reference genome) and position_accessible_regions_genes_TF.txt (positions of accessible regions of genes)
+                            `fastasequence.pl`
 
-                          output file is fasta_sequence_accessible_regions_genes_TF.txt
+    input file1: Drosophila_melanogaster.BDGP5.75.dna.toplevel.fa (fasta sequence of reference genome)
+    
+    inputfile2: position_accessible_regions_genes_TF.txt file
+    
+    output file : fasta_sequence_accessible_regions_genes_TF.txt
 
 
 #patser program command to get the scores (strength binding) and numbers of binding sites 
