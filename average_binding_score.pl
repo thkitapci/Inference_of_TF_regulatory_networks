@@ -5,7 +5,7 @@ use strict; use warnings;
 my %hash;
 my %id2c;
 
-die "usage: <average_score.pl> <genes_have_p_value_less_than_6>\n" unless @ARGV == 1;
+die "usage: <average_score.pl> <TF_results_patser_scores_5_10.txt>\n" unless @ARGV == 1;
 
 open("IN", $ARGV[0]);
 
