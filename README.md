@@ -90,7 +90,15 @@ D) get genes_name , number of binding sites , average of binding sites , co-vari
                   
                   outputfile : genes_names_count_average_expression_covariation_tf.txt
 
-E) `perl more_two_binding_sites_negative_positive.pl` keep the genes which have more than binding sites then divide the data into positive and negative covariation output files : negative_201_bicoid_492 & positive_291_bicoid_492
+E)  keep the genes which have more than two binding sites then divide those genes into genes have positive and negative covariation with each TF of interest 
+
+                                    `more_two_binding_sites_negative_positive.pl` 
+                                    
+                       input file 1 : genes_names_count_average_expression_covariation_tf.txt
+                       
+                       output file 1: negative.txt ( genes have more than two binding sites and have negative covariation with TF)
+                       
+                       output file 2 : positive.txt (genes have more than two binding sites and have positive covariation with TF)
 
 F) two spearman correlations are done R for each TFs (positive and negative covariation). one between covariation and number of binding sites and another one between covariation and average of binding score
 
