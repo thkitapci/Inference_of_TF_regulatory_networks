@@ -4,7 +4,7 @@ use strict;
 
 use warnings;
 
-open ("IN","");
+open ("IN","TF_results_patser_scores.txt");
 
  my @header;
 
