@@ -80,7 +80,15 @@ C) get genes_name,number of binding sites and average of binding sore for each g
               
               output file : genes_names_count_average_tf.txt
 
-D)`perl genes_numbers_score_expression.pl` get genes_name , number of binding sites , average of binding sites , co-variation of each gene has p value less than -6 output file:genes_count_average_expression_bicoid
+D) get genes_name , number of binding sites , average of binding sites , co-variation of each gene in 10 and 5% tail of score distribution with each TF motif (PWM) of interest
+
+                              `genes_numbers_score_expression.pl`
+                              
+                   inputfile 1 : genes_names_count_average_tf.txt 
+                   
+                  inputfile 2 : expression_covariation_tf_14.txt file (expression covariation of each TF of interest with 7805 genes).
+                  
+                  outputfile : genes_names_count_average_expression_covariation_tf.txt
 
 E) `perl more_two_binding_sites_negative_positive.pl` keep the genes which have more than binding sites then divide the data into positive and negative covariation output files : negative_201_bicoid_492 & positive_291_bicoid_492
 
