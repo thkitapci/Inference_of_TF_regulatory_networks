@@ -1,4 +1,4 @@
-score_TF=read.table('',sep="\t")
+score_TF=read.table('TF_results_patser_scores.txt',sep="\t")
 
 score=data_TF["V2"]
 
