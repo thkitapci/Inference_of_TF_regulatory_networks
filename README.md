@@ -5,10 +5,10 @@ ftp://ftp.ensembl.org/pub/release-75/fasta/drosophila_melanogaster/dna/Drosophil
 
 ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_melanogaster.BDGP5.75.gtf.gz
 
-# Combine 25 crosses with biological replicates
+# Create count table
 
+    
 
-perl [`embryoCountscript_combination.pl`](https://github.com/thkitapci/Inference_of_TF_regulatory_networks/blob/master/embryoCountscript_combination.pl)
 
 
 						   
