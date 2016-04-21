@@ -51,6 +51,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
  
   A: look at the distribution of the scores given by patser then determine the cutoffs of 10% and 5 % tail of score distribution.
   
+  
                                     10_5_tail_score_distribution.r
   
                                 input file : TF_results_patser_scores.txt
