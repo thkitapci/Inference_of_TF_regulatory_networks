@@ -47,7 +47,7 @@ rscript.r
 
 #Filtering patser output data
 
- Patser is run using the "-li" option which sets the p-value cut-off based on the sample size adjusted information content. Then we look at the distribution of the scores given by patser  and take  10% and 5 % tail of score distribution.
+ Patser is run using the "-li" option which sets the p-value cut-off based on the sample size adjusted information content. We look at the distribution of the scores given by patser  then take  10% and 5 % tail of score distribution for downstream analysis.
 
 
 # analysis after patser
