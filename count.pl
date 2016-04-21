@@ -6,7 +6,7 @@ use warnings;
 
 my %count;
 
-open("IN","genes_have_p_value_less_than_6");
+open("IN","TF_results_patser_scores");
 
 foreach(<IN>){chomp;
 
