@@ -1,4 +1,7 @@
 #Read mapping
+
+                                       Inference_of_TF_regulatory_networks/counting/map.sh
+                                       
 Reference genome used for mapping:
 
 ftp://ftp.ensembl.org/pub/release-75/fasta/drosophila_melanogaster/dna/Drosophila_melanogaster.BDGP5.75.dna.toplevel.fa.gz
@@ -6,6 +9,28 @@ ftp://ftp.ensembl.org/pub/release-75/fasta/drosophila_melanogaster/dna/Drosophil
 ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_melanogaster.BDGP5.75.gtf.gz
 
 # Create count table
+                                     Inference_of_TF_regulatory_networks/counting/count.sh
+                                     
+             output file : embryoCounts.tab (has 71 crosses .25 crosses were sequenced with two biological replicates and the remaining 46 crosses were sequenced without replicates.In total 96 samples . 
+             
+#Combination the two replicates of 25 crosses
+
+                                embryoCounts_combination.pl 
+                                
+                   input file :    embryoCounts.tab 
+                   
+                   output file : embryoCountsresult_with_length.txt
+                   
+# Count Data normalization (RPKM)
+
+                                                 RPKM_normalization.r
+                                                 
+                         input file :   embryoCountsresult_with_length.txt
+                         
+                         output file : rpkm59_exp50_genes_least_50_samples.tab
+                         
+                         
+                                 
 
     
 
