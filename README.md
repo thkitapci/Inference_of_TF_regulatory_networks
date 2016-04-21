@@ -96,9 +96,9 @@ E)  keep the genes which have more than two binding sites then divide those gene
                                     
                        input file 1 : genes_names_count_average_expression_covariation_tf.txt
                        
-                       output file 1: negative.txt ( genes have more than two binding sites and have negative covariation with TF)
+                       output file 1: negative.txt ( genes have more than two binding sites and negative covariation with TF)
                        
-                       output file 2 : positive.txt (genes have more than two binding sites and have positive covariation with TF)
+                       output file 2 : positive.txt (genes have more than two binding sites and positive covariation with TF)
 
 F) two spearman correlations are done R for each TFs (positive and negative covariation). one between covariation and number of binding sites and another one between covariation and average of binding score
 
