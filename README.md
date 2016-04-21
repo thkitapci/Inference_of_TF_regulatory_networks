@@ -43,7 +43,7 @@ rscript.r
 
 
 #patser program command to get the scores (strength binding) and numbers of binding sites 
-`patser-v3e -A a:t 0.53 c:g 0.47 -f fasta_sequence_accessible_regions_genes_TF.txt  -m PWM of each TF of interest -c -li > TF_results_patser_scores`
+`patser-v3e -A a:t 0.53 c:g 0.47 -f fasta_sequence_accessible_regions_genes_TF.txt  -m PWM of each TF of interest -c -li > TF_results_patser_scores.txt`
 
 #Filtering patser output data
 
@@ -56,9 +56,9 @@ A)  count the numbers of binding sites for each gene in 10 and 5 % tail of score
 
                                      `count.pl`
                                      
-      input file (TF_results_patser_scores) :  names and scores of the genes in 10 and 5% tail of score distribution
+      input file (TF_results_patser_scores.txt) :  names and scores of the genes in 10 and 5% tail of score distribution
       
-      output file (number_binding_sites_TF) : name and numbers of each gene in 10 and 5% tail of score distribution
+      output file (number_binding_sites_TF.txt) : name and numbers of each gene in 10 and 5% tail of score distribution
                              
 
 
