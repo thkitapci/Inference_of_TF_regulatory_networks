@@ -31,11 +31,11 @@ output of perl 5kb: position_accessible_regions_genes_TF (file has positions of 
 #pull out the fasta sequence for  accessible regions of genes which have correlation with each TF of interest  from reference genome
 `perl fastasequence.pl` (input files are Drosophila_melanogaster.BDGP5.75.dna.toplevel.fa (fasta sequence of reference genome) and position_accessible_regions_genes_TF.txt (positions of accessible regions of genes)
 
-                          output file is fasta_sequence_accessible_regions_genes_TF
+                          output file is fasta_sequence_accessible_regions_genes_TF.txt
 
 
-#patser program example for bicoid (similarly for others)
-`patser-v3e -A a:t 0.53 c:g 0.47 -f results_bicoid.txt -m BCD_Fly_Reg -c -li > bicoid_patser_results_Fly_Reg`
+#patser program command to get the scores (strength binding) and numbers of binding sites 
+`patser-v3e -A a:t 0.53 c:g 0.47 -f fasta_sequence_accessible_regions_genes_TF.txt  -m PWM of each TF of interest -c -li > TF_results_patser_scores`
 
 #Filtering patser output
 
