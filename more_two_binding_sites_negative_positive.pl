@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 use strict; use warnings;
 
-open ("IN","genes_count_average_expression_bicoid");
+open ("IN","genes_names_count_average_expression_covariation_tf.txt");
 open (OUT,">positive.txt") or die;
 open (OUT2,">negative.txt") or die;
 
