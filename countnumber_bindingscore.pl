@@ -4,9 +4,9 @@ use strict;
 
 use warnings;
 
-open("IN","count_bicoid_genes");
+open("IN","number_binding_sites_TF.txt");
 
-open("aa","bicoid_genes_average");
+open("aa","TF.avg.txt");
 
 my@in=(<IN>);
 
