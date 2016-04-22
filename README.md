@@ -51,7 +51,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
                              Output file : cor_tf_gene.tab 
                              
                              
-# Correlation to get the  expression covariation  between highly expressed genes (7805 ) and 14 TFs of interest.    
+# Spearman's correlation  to get the  expression covariation  between highly expressed genes (7805 ) and 14 TFs of interest.    
 
                                              Expression_covariation_14_TFs.r  
                                              
