@@ -27,7 +27,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
                                                  
                          input file :   embryoCountsresult_with_length.txt
                          
-                         output file : rpkm59_exp50_genes_least_50_samples.tab
+                         output file : rpkm59_exp50_genes_least_50_samples.tab (file has 59 samples and 7805 genes)
                          
                          
 # Expression levels of TFs which expressed in our data
@@ -38,7 +38,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
                           
                           input file 2: TF_names397.txt ( has TFs names from FlyTF.org)
                           
-                          output file : tfselected.txt file 
+                          output file : tfselected.txt file (expression levels of TFs in the data)
                           
 # Correlation to get the  expression covariation  between highly expressed genes (7805 ) and all TFs expressed in our data.
 
