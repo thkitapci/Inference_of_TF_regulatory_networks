@@ -61,7 +61,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
                          
                        Input file 3: rpkm59_exp50_genes_least_50_samples.tab 
                          
-                   Output file : expression_covariation_tf_14.txt  ( file has expression covariation between each TF of interest and 7805 genes .genes_name_TF.txt is the first column)
+                   Output file : expression_covariation_tf_14.txt  ( file has expression covariation between each TF of interest and 7805 genes .First column is genes_names which pulled out in file (genes_name_TF.txt) for next step)
                              
                              
 #pull out the positions of the genes which have correlated values between -1 and 1 with each TF of interest from gtf file
@@ -118,7 +118,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
 
 # analysis after patser
 
-A)  count the numbers of binding sites for each gene in 10 and 5 % tail of score distribution with each TF motif (PWM) of interest -consider as number of binding sites 
+A)  count the numbers of binding sites for each gene in 10 and 5 % tail of score distribution with each TF motif (PWM) of interest ----output file contains the number of binding sites for each gene with TF of interest
 
                                      `count.pl`
                                      
@@ -128,7 +128,7 @@ A)  count the numbers of binding sites for each gene in 10 and 5 % tail of score
                              
 
 
-B) calculate the average of  binding scores for each gene has more than one binding sit in 10 and 5 % tail of score distribution with each TF motif (PWM)of interest --consider as average of strength of TF binding sites 
+B) calculate the average of  binding scores for each gene has more than one binding sit in 10 and 5 % tail of score distribution with each TF motif (PWM)of interest --output file contains the average of strength binding for each gene with each TF of interest.  
 
                                              `average_binding_score.pl`
                      
@@ -136,7 +136,7 @@ B) calculate the average of  binding scores for each gene has more than one bind
         
         Output file (TF.avg.txt) : name and average strength binding of each gene in 10% and 5% tail of score distribution
 
-C) get genes_name,number of binding sites and average of binding sore for each gene in 10 and 5% tail of score distribution with each TF motif (PWM) of interest
+C) get genes_name,number of binding sites and average of binding sore for each gene in 10 and 5% tail of score distribution with each TF motif (PWM) of interest -- output file has number of binding sites and average of strength binding for each gene with each TF of interest.
 
                                      `countnumber_bindingscore.pl`
                                      
@@ -146,7 +146,7 @@ C) get genes_name,number of binding sites and average of binding sore for each g
               
               Output file : genes_names_count_average_tf.txt : name , number_binding_sites and average_binding of each gene in 10% and 5% tail of score distribution
 
-D) get genes_name , number of binding sites , average of binding sites , co-variation of each gene in 10% and 5% tail of score distribution with each TF motif (PWM) of interest
+D) get genes_name , number of binding sites , average of binding sites , co-variation of each gene in 10% and 5% tail of score distribution with each TF motif (PWM) of interest.
 
                               `genes_numbers_score_expression.pl`
                               
@@ -154,7 +154,7 @@ D) get genes_name , number of binding sites , average of binding sites , co-vari
                    
                   Input file 2 : expression_covariation_tf_14.txt (expression covariation of each TF of interest with 7805 genes).
                   
-                  Output file : genes_names_count_average_expression_covariation_tf.txt
+                  Output file : genes_names_count_average_expression_covariation_tf.txt (has number_binding_sites , average_strength_binding, expression_covariation for each gene with each TF of interest)
 
 E)  keep the genes which have more than two binding sites then divide those genes into genes have positive and negative covariation with each TF of interest 
 
