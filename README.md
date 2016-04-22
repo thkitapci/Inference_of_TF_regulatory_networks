@@ -17,7 +17,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
 
                                 embryoCounts_combination.pl 
                                 
-                   Input file :    embryoCounts.tab 
+                   Input file :    embryoCounts.tab ( file has 96 samples and 156825 genes)
                    
                    Output file : embryoCountsresult_with_length.txt (file has 71 samples and 15682 genes)
                    
