@@ -55,13 +55,13 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
 
                                              Expression_covariation_14_TFs.r  
                                              
-                         input file 1:  tfselected.txt file       
+                         input file 1:  tfselected.txt file        
                          
-                         input file 2: gene_id_14_TFs
+                         input file 2: gene_id_14_TFs (file has gene id of 14 TFs of interest)
                          
-                         input file 3: rpkm59_exp50_genes_least_50_samples.tab
+                         input file 3: rpkm59_exp50_genes_least_50_samples.tab 
                          
-                   output file : expression_covariation_tf_14.txt  (has genes_name_TF (column1) and expressioncovariation (column2)
+                   output file : expression_covariation_tf_14.txt  (has genes_name_TF [names of 7805 genes] (column1) and expressioncovariation between TFs and 7805 genes (column2)
                              
                              
 #pull out the positions of the genes which have correlated values between -1 and 1 with each TF of interest from gtf file
