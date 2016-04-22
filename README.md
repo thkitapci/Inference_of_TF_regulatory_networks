@@ -19,7 +19,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
                                 
                    input file :    embryoCounts.tab 
                    
-                   output file : embryoCountsresult_with_length.txt
+                   output file : embryoCountsresult_with_length.txt (file has 71 samples and 15682 genes)
                    
 # Count Data normalization (RPKM)
 
