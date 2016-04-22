@@ -19,7 +19,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
                                 
                    Input file :    embryoCounts.tab ( file has 96 samples and 156825 genes)
                    
-                   Output file : embryoCountsresult_with_length.txt (file has 71 samples and 15682 genes)
+                   Output file : embryoCountsresult_with_length.txt (file has 71 samples and 15682 genes plus last column represents the length of each gene from Flybase database)
                    
 # Count Data normalization (RPKM)
 
@@ -64,7 +64,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
                    Output file : expression_covariation_tf_14.txt  ( file has expression covariation between each TF of interest and 7805 genes .First column is genes_names which pulled out in file (genes_name_TF.txt) for next step)
                              
                              
-#pull out the positions of the genes which have correlated values between -1 and 1 with each TF of interest from gtf file
+#Pull out the positions of the genes which have correlated values between -1 and 1 with each TF of interest from gtf file
 
 `awk '{if($3=="gene")print;}' Drosophila_melanogaster.BDGP5.75.gtf >result1.txt`
 
@@ -72,33 +72,33 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
 
 `tail -n+2 genes_name_TF.txt |while read line; do grep $line result.txt | awk '{if($3=="gene") print;}' >>position_Genes.txt;done;`
 
-# accessible regions of genes which have correlation with each TF of interest in 5kb window
+# Accessible regions of genes which have correlation with each TF of interest in 5kb window
                              `5kb.pl`
                              
-  Input file 1: position_Genes.txt file (positions of the genes which have positive and negative correlation with each TF of interest from  Drosophila_melanogaster gtf file).
+  Input file 1: position_Genes.txt file (positions of genes which have positive and negative correlation with each TF of interest from  Drosophila_melanogaster gtf file).
   
-  Input file 2:correlated accessible regions file ( the accessible regions of Drosophila_melanogaster developmental stage which we are interested in).
+  Input file 2:correlated accessible regions file ( the accessible regions of Drosophila_melanogaster developmental stage which we are interested in from earlier study).
   
    Output file: position_accessible_regions_genes_TF.txt file ( positions of accessible regions of genes which have correlation with each TF).
 
-#pull out the fasta sequence for  accessible regions of genes which have correlation with each TF of interest  from reference genome
+#Pull out the fasta sequence for  accessible regions of genes which have correlation with each TF of interest  from reference genome
                             `fastasequence.pl`
 
-    Input file 1: Drosophila_melanogaster.BDGP5.75.dna.toplevel.fa (fasta sequence of reference genome)
+    Input file 1: Drosophila_melanogaster.BDGP5.75.dna.toplevel.fa (Fasta sequence of reference genome)
     
     Inputfile 2: position_accessible_regions_genes_TF.txt file
     
-    Output file : fasta_sequence_accessible_regions_genes_TF.txt  (fasta sequence of accessible regions of genes have correlation with each TF)
+    Output file : fasta_sequence_accessible_regions_genes_TF.txt  (Fasta sequence of accessible regions of genes have correlation with each TF)
 
 
-#patser program command to get the scores (strength binding) and numbers of binding sites in accessible regions of genes with PWM of each TF of interest.
+#PATSER program command to get the scores (strength binding) and numbers of binding sites in accessible regions of genes have correlation with PWM of each TF of interest from Fly Factor Survey.
 `patser-v3e -A a:t 0.53 c:g 0.47 -f fasta_sequence_accessible_regions_genes_TF.txt  -m PWM of each TF of interest -c -li > TF_results_patser_scores.txt`
 
 #Filtering patser output data
 
  Patser is run using the "-li" option which sets the p-value cut-off based on the sample size adjusted information content.
  
-  A: look at the distribution of the scores given by patser then determine the cutoffs of 10% and 5 % tail of score distribution.
+  A: Look at the distribution of the scores given by PATSER then determine the cutoffs of 10% and 5 % tail of score distribution.
   
   
                                     10_5_tail_score_distribution.r
@@ -107,7 +107,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
                                 
                                 Output file : TF_score_distribution_plot.png (plot of score distribution with 10% and 5% tail values)
            
-    B: keep the genes in 10% and 5 % tail of score distribution for downstream analysis.
+    B: Keep the genes in 10% and 5 % tail of score distribution for downstream analysis.
     
                              filteration_genes_5%_10%.pl
                              
@@ -116,9 +116,9 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
                           Output file : TF_results_patser_scores_5_10.txt ( file has genes which in 10 % and 5 % tail cutoffs)
 
 
-# analysis after patser
+# Analysis after PATSER
 
-A)  count the numbers of binding sites for each gene in 10 and 5 % tail of score distribution with each TF motif (PWM) of interest ----output file contains the number of binding sites for each gene with TF of interest
+A)  Count the numbers of binding sites for each gene in 10 and 5 % tail of score distribution with each TF motif (PWM) of interest ----output file contains the number of binding sites for each gene with TF of interest
 
                                      `count.pl`
                                      
@@ -128,7 +128,7 @@ A)  count the numbers of binding sites for each gene in 10 and 5 % tail of score
                              
 
 
-B) calculate the average of  binding scores for each gene has more than one binding sit in 10 and 5 % tail of score distribution with each TF motif (PWM)of interest --output file contains the average of strength binding for each gene with each TF of interest.  
+B) Calculate the average of  binding scores for each gene has more than one binding sit in 10 and 5 % tail of score distribution with each TF motif (PWM)of interest --output file contains the average of strength binding for each gene with each TF of interest.  
 
                                              `average_binding_score.pl`
                      
@@ -136,7 +136,7 @@ B) calculate the average of  binding scores for each gene has more than one bind
         
         Output file (TF.avg.txt) : name and average strength binding of each gene in 10% and 5% tail of score distribution
 
-C) get genes_name,number of binding sites and average of binding sore for each gene in 10 and 5% tail of score distribution with each TF motif (PWM) of interest -- output file has number of binding sites and average of strength binding for each gene with each TF of interest.
+C) Get genes_name,number of binding sites and average of binding sore for each gene in 10 and 5% tail of score distribution with each TF motif (PWM) of interest -- output file has number of binding sites and average of strength binding for each gene with each TF of interest.
 
                                      `countnumber_bindingscore.pl`
                                      
@@ -146,7 +146,7 @@ C) get genes_name,number of binding sites and average of binding sore for each g
               
               Output file : genes_names_count_average_tf.txt : name , number_binding_sites and average_binding of each gene in 10% and 5% tail of score distribution
 
-D) get genes_name , number of binding sites , average of binding sites , co-variation of each gene in 10% and 5% tail of score distribution with each TF motif (PWM) of interest.
+D) Get genes_name , number of binding sites , average of binding sites , co-variation of each gene in 10% and 5% tail of score distribution with each TF motif (PWM) of interest.
 
                               `genes_numbers_score_expression.pl`
                               
@@ -156,7 +156,7 @@ D) get genes_name , number of binding sites , average of binding sites , co-vari
                   
                   Output file : genes_names_count_average_expression_covariation_tf.txt (has number_binding_sites , average_strength_binding, expression_covariation for each gene with each TF of interest)
 
-E)  keep the genes which have more than two binding sites then divide those genes into genes have positive and negative covariation with each TF of interest 
+E)  Keep the genes which have more than two binding sites then divide those genes into genes have positive and negative covariation with each TF of interest 
 
                                     `more_two_binding_sites_negative_positive.pl` 
                                     
@@ -166,7 +166,7 @@ E)  keep the genes which have more than two binding sites then divide those gene
                        
                        Output file 2 : positive.txt (genes have more than two binding sites and positive covariation with TF)
 
-F)  spearman correlations is done by R for positive.txt and negative.txt  to estimate the correlation between the number of binding sites and expressioncovariation as well as between average strength binding and expressioncovariation of each TF of interest.
+F)  Spearman correlations is done by R for positive.txt and negative.txt  to estimate the correlation between the number of binding sites and expressioncovariation as well as between average strength binding and expressioncovariation of each TF of interest.
             
                            # R script (positive.r)
                            
