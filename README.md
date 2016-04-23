@@ -99,7 +99,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
  Patser is run using the "-li" option which calculates cutoff binding score based on PWM's information content For each TF.
 
  
-  A: Determine the top cutoffs of 10% and 5 %  of binding scores for each TF.
+  A: Determine the top cutoffs 10% and 5 %  of binding scores for each TF.
   
   
                                     10_5_tail_score_distribution.r
