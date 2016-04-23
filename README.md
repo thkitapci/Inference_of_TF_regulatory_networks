@@ -96,7 +96,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
 
 #Filtering patser output data
 
- Patser is run using the "-li" option which calculates cutoff binding score based on PWM's information content For each TF by PATSER.
+ Patser is run using the "-li" option which calculates cutoff binding score based on PWM's information content For each TF.
 
  
   A: Look at the distribution of the scores given by PATSER then determine the cutoffs of 10% and 5 % tail of score distribution.
