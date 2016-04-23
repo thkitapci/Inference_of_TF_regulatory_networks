@@ -99,7 +99,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
  Patser is run using the "-li" option which calculates cutoff binding score based on PWM's information content For each TF.
 
  
-  A: Look at the distribution of the scores given by PATSER then determine the cutoffs of 10% and 5 % tail of score distribution.
+  A: Determine the top cutoffs of 10% and 5 %  of binding scores for each TF.
   
   
                                     10_5_tail_score_distribution.r
@@ -108,7 +108,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
                                 
                                 Output file : TF_score_distribution_plot.png (plot of score distribution with 10% and 5% tail values)
            
-    B: Keep the genes in 10% and 5 % tail of score distribution for downstream analysis.
+    B: Keep the genes have binding scores in top 10% and 5 % cutoffs for downstream analysis.
     
                              filteration_genes_5%_10%.pl
                              
