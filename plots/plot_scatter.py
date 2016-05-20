@@ -15,6 +15,9 @@ import numpy as np
 import scipy.integrate
 import sys
 # Import pyplot for plotting
+import matplotlib
+matplotlib.use('PDF')  #trick for cluster's stupid settings
+
 import matplotlib.pyplot as plt
 
 # Seaborn, useful for graphics
