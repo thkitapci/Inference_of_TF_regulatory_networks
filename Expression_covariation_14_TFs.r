@@ -9,7 +9,7 @@ B=tf$Genes %in% gene_id_14_TFs
 TF14=tf[B,]
 write.table(TF14,file="expression_level_14_TFs", row.names=F, sep="\t",quote=F)
 
-#get expression covariation of these TFs with 7805 genes
+#get expression covariation of 14 TFs with 7805 genes
 
    gene=read.table("rpkm59_exp50_genes_least_50_samples.tab",sep="\t",header=T,row.names=1)
 
