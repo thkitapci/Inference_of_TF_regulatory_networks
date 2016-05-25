@@ -50,7 +50,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
                              
                              Input file 2: tfselected.txt file
                              
-                             Output file : cor_tf_gene.tab ( has expression covariation between expression levels of TFs and highly expressed genes (7805 genes)
+                             Output file : cor_tf_gene.tab ( has expression covariation between expression levels of TFs (397) and highly expressed genes (7805 genes)
                              
                              
 # Spearman's correlation  to get the  expression covariation  between highly expressed genes (7805 ) and 14 TFs of interest.    
