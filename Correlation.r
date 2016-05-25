@@ -1,4 +1,4 @@
-# correlation between tfselected.txt (397 TFs) and 7805 genes (distribution of input files is normal )
+# correlation between tfselected.txt (397 TFs) and 7805 genes 
 
 gene=read.table("rpkm59_exp50_genes_least_50_samples.tab",sep="\t",header=T,row.names=1)
 
