@@ -29,7 +29,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
                                                  
                          Input file :   embryoCountsresult_with_length.txt
                          
-                         Output file : rpkm59_exp50_genes_least_50_samples.tab (file has 59 samples and 7805 genes)
+                         Output file : rpkm59_exp50_genes_least_50_samples.tab (file has 59 samples and 7805 genes [Highly expressed genes in at least 50 samples)
                          
                          
 # Expression levels of TFs which expressed in our data
