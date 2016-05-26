@@ -63,7 +63,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
                          
                        Input file 3: rpkm59_exp50_genes_least_50_samples.tab 
                          
-                   Output file : expression_covariation_tf_14.txt  ( file has expression covariation between each TF of interest and 7805 genes .First column is genes_names which pulled out in file (genes_name_TF.txt) for next step)
+                   Output file : expression_covariation_tf_14.txt  ( file has expression covariation between expression levels of 14 TFs of interest and highly expressed genes (7805 genes) .First column is genes_names which pulled out in file (genes_name_TF.txt) for next step)
                              
                              
 #Pull out the positions of the genes which have correlated values between -1 and 1 with each TF of interest from gtf file
