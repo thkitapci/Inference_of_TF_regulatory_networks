@@ -81,7 +81,7 @@ ftp://ftp.ensembl.org/pub/release-75/gtf/drosophila_melanogaster/Drosophila_mela
   
   Input file 2:correlated accessible regions file ( the accessible regions of Drosophila_melanogaster developmental stage which we are interested in from earlier study).
   
-   Output file: position_accessible_regions_genes_TF.txt file ( positions of accessible regions of genes which have correlation with each TF).
+   Output file: position_accessible_regions_genes_TF.txt file ( positions of accessible regions of genes which have positive and negative correlation with each TF).
 
 #Pull out the fasta sequence for  accessible regions of genes which have correlation with each TF of interest  from reference genome
                             `fastasequence.pl`
