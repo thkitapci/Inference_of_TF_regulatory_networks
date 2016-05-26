@@ -131,7 +131,7 @@ A)  Count the numbers of binding sites for each gene in 10 and 5 % tail of score
                              
 
 
-B) Calculate the average of  binding scores for each gene has more than one binding sit in 10 and 5 % tail of score distribution with each TF motif (PWM)of interest --output file contains the average of strength binding for each gene with each TF of interest.  
+B) Calculate the average of  binding score for binding sites of each gene in 10 and 5 % tail of score distribution with  TF motif (PWM)of interest --output file contains the average of strength binding for each gene with each TF of interest.  
 
                                              `average_binding_score.pl`
                      
